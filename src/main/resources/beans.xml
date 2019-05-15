@@ -4,18 +4,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-       <bean id="actor" class="com.stackroute.spring.beans.Actor">
-            <property name="name" value="Darshan"/>
-            <property name="gender" value="Male"/>
-            <property name="age" value="45"/>
-        </bean>
-        <bean id="movie" class="com.stackroute.spring.beans.Movie">
-            <property name="actor">
-                <ref bean="actor"></ref>
-            </property>
-        </bean>
-        <bean id="beanLifeCycleDemo" class="com.stackroute.spring.beans.BeanLifeCycleDemo" init-method="afterPropertiesSet" destroy-method="destroy"/>
-        <bean id="beanPostProcessorDemo" class="com.stackroute.spring.beans.BeanPostProcessorDemo"/>
-
-    </beans>
-
+    <bean id="actor" class="com.stackroute.spring.beans.Actor">
+        <property name="name" value="Darshan"/>
+        <property name="gender" value="Male"/>
+        <property name="age" value="45"/>
+    </bean>
+    <bean id="movie" class="com.stackroute.spring.beans.Movie">
+        <property name="actor">
+            <ref bean="actor"></ref>
+        </property>
+    </bean>
+    <bean id="beanLifecycleDemo" class="com.stackroute.spring.beans.BeanLifeCycleDemo" init-method="customInit" destroy-method="customDestroy"/>
+</beans>
