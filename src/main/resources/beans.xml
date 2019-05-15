@@ -17,5 +17,6 @@
         <bean id="beanLifeCycleDemo" class="com.stackroute.spring.beans.BeanLifeCycleDemo" init-method="afterPropertiesSet" destroy-method="destroy"/>
         <bean id="beanPostProcessorDemo" class="com.stackroute.spring.beans.BeanPostProcessorDemo"/>
 
+
     </beans>
 
